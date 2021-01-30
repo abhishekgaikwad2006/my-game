@@ -3,9 +3,10 @@ class Form {
     constructor() {
       this.input = createInput("Name");
       this.button = createButton('Play');
-      this.greeting = createElement('h2');
+      this.title2 = createElement('h2');
+      this.title3 = createElement('h2');
       this.title = createElement('h2');
-      this.reset = createButton('Reset');
+    
       
     }
     hide(){
@@ -13,33 +14,36 @@ class Form {
       this.button.hide();
       this.input.hide();
       this.title.hide();
-    }
+    }i
   
     display(){
-      background("blue");
-      this.title.html("Car Racing Game");
-      this.title.position(displayWidth/2 - 50, 0);
-  
-      this.input.position(displayWidth/2 - 40 , displayHeight/2 - 80);
-      this.button.position(displayWidth/2 + 30, displayHeight/2);
-      this.reset.position(displayWidth-100,20);
+      background(introBG);
+     
+      this.title.html("Saving the planet!");
+      this.title2.html("Our planet is attacked by zombies!")
+      this.title3.html("You are on a mission to save it!")
+      
+      this.title.position(550, 0);
+      this.title2.position(490,60);
+      this.title3.position(520,100);
+      this.input.position(540,350);
+      this.button.position(610,400);
+    
   
       this.button.mousePressed(()=>{
         this.input.hide();
         this.button.hide();
+        this.title.hide();
+        this.title2.hide();
+        this.title3.hide();
         player1name = this.input.value();
-        //playerCount+=1;
-       // player.index = playerCount;
+        console.log(player1name);
+        gameState=1;
         
-        this.greeting.html("Hello " + player1name)
-        this.greeting.position(displayWidth/2 - 70, displayHeight/4);
+       
       });
   
-     /* this.reset.mousePressed(()=>{
-        player.updateCount(0);
-        game.update(0);
-      });*/
-  
+   
     }
   }
   
