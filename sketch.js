@@ -81,12 +81,12 @@ console.log(gameState)
   if(keyDown("space")) {
     createBullet2();
     gun1sound.play();
-    bullet2.velocityX = 10;
+    bullet2.velocityX = 20;
   }
   if(keyDown("enter")) {
     createBullet();
     gun2sound.play();
-    bullet.velocityX = 10;
+    bullet.velocityX = 20;
   }
   if(keyDown("UP_Arrow")&&player.y>500){
     player.y=player.y-10;
@@ -153,7 +153,7 @@ function spawnObstacles() {
   if(frameCount % 250 === 0) {
     var obstacle = createSprite(1000,600,10,40);
     //obstacle.debug = true;
-    obstacle.velocityX = -5;//(6 + 3*score/100);
+    obstacle.velocityX = -5; (5 + 2*score1/100);
     
     //generate random obstacles
     var rand = Math.round(random(1,3));
